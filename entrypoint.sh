@@ -1,9 +1,9 @@
 #!/bin/bash
 
-ls -la /var/secrets
+ls -la /run/secrets
 echo "Prepare secret environments"
-if [ -d "/var/secrets" ]; then
-  for a in /var/secrets/*
+if [ -d "/run/secrets" ]; then
+  for a in /run/secrets/*
   do 
     echo $a
     echo $(basename $a) "$(cat $a)"
